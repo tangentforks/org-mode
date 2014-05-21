@@ -83,7 +83,8 @@ This function is called by `org-babel-execute-src-block'"
 	 (progn
 	   (with-temp-file tmp-script-file
 	     (insert full-body))
-	   (org-babel-eval (format "jconsole < %s" tmp-script-file) ""))
+	   (org-babel-eval (format (concat j-console-cmd " < %s")
+				   tmp-script-file) ""))
        (org-babel-J-eval-string full-body)))))
 
 (defun org-babel-J-eval-string (str)
