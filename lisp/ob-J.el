@@ -30,6 +30,7 @@
 
 ;;; Code:
 (require 'ob)
+(require 'j-console)
 
 (declare-function org-trim "org" (S))
 (declare-function j-console-ensure-session "ext:j-console" ())
